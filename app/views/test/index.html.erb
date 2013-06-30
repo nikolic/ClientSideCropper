@@ -1,0 +1,43 @@
+
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <a class="brand" href="#">
+              Awesome Cropper Example
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <h1>Example of input</h1>
+          <p>
+          For additional info see <a
+          href="https://github.com/Andrew8xx8/awesome-cropper/blob/master/README.md">readme</a>
+          </p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+<!--           <form >
+            <input id="sample_input" type="hidden" name="test[image]">
+          </form> -->
+         <%= form_tag(save_path) do %>
+            <input id="sample_input" type="hidden" name="test[image]">
+            <%= submit_tag "Submit" %>
+         <% end %>
+        </div>
+      </div>
+      </div>
+
+ <script type="text/javascript">
+
+  //$(document).ready(function () {
+      $('#sample_input').awesomeCropper(
+      { width: 150, height: 150, debug: true }
+      );
+ // });
+
+
+ </script>
